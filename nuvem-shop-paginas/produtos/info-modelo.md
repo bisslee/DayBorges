@@ -32,8 +32,8 @@ Iza Reborn - Bebê Reborn
 
 ### SEO
 
-**Título SEO:**
-**Descrição SEO:**
+**Título SEO (max 70 carc):**
+**Descrição SEO (max 160 carc):**
 
 ### URL do produto
 
