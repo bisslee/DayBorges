@@ -1,0 +1,326 @@
+/* === Layout geral (uso em NuvemShop / páginas estáticas) === */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+	line-height: 1.5;
+	color: #333;
+	background: #fafafa;
+}
+
+.site-header {
+	background: linear-gradient(135deg, #f8e8ee 0%, #f0d4e0 100%);
+	padding: 1.5rem 1rem;
+	text-align: center;
+	border-bottom: 1px solid #e8c4d0;
+}
+
+.site-title {
+	margin: 0;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: #6b3a4a;
+}
+
+.site-tagline {
+	margin: 0.25rem 0 0;
+	font-size: 0.95rem;
+	color: #7d4a5a;
+}
+
+.site-main {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
+
+.intro {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #555;
+}
+
+.nav-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+	justify-content: center;
+}
+
+.nav-card {
+	display: block;
+	padding: 1.5rem;
+	background: #fff;
+	border: 1px solid #e8d4dc;
+	border-radius: 10px;
+	text-decoration: none;
+	color: inherit;
+	transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.nav-card:hover {
+	border-color: #d4a8b8;
+	box-shadow: 0 4px 12px rgba(107, 58, 74, 0.1);
+}
+
+.nav-card-title {
+	display: block;
+	font-weight: 600;
+	color: #6b3a4a;
+}
+
+.nav-card-desc {
+	display: block;
+	font-size: 0.875rem;
+	color: #777;
+	margin-top: 0.25rem;
+}
+
+.site-footer {
+	text-align: center;
+	padding: 1rem;
+	font-size: 0.875rem;
+	color: #888;
+	border-top: 1px solid #eee;
+	margin-top: 2rem;
+}
+
+/* === Layout com menu lateral (produtos / blog) === */
+.layout-with-sidebar {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100vh;
+}
+
+.sidebar {
+	width: 260px;
+	min-width: 260px;
+	background: #fff;
+	border-right: 1px solid #e8d4dc;
+	padding: 1.25rem;
+}
+
+.sidebar h2 {
+	margin: 0 0 1rem;
+	font-size: 1.1rem;
+	color: #6b3a4a;
+}
+
+.sidebar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar a {
+	display: block;
+	padding: 0.5rem 0;
+	color: #555;
+	text-decoration: none;
+	border-bottom: 1px solid #f0e4e8;
+	font-size: 0.95rem;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+	color: #6b3a4a;
+	font-weight: 500;
+}
+
+.main-content {
+	flex: 1;
+	padding: 1.5rem 2rem;
+	max-width: 720px;
+}
+
+.main-content .product-body,
+.main-content .blog-body {
+	background: #fff;
+	padding: 1.5rem;
+	border-radius: 8px;
+	border: 1px solid #eee;
+}
+
+.main-content .product-body h1,
+.main-content .blog-body h1 {
+	margin-top: 0;
+	color: #6b3a4a;
+	font-size: 1.5rem;
+}
+
+.main-content .product-body img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 6px;
+}
+
+/* === Caixa SEO (abaixo da descrição, antes do feedback) === */
+.seo-box {
+	margin-top: 1.5rem;
+	padding: 1.25rem;
+	background: #f0f4f8;
+	border: 1px solid #c4d4e4;
+	border-radius: 8px;
+	font-size: 0.9rem;
+}
+
+.seo-box h3 {
+	margin: 0 0 1rem;
+	font-size: 1.05rem;
+	color: #2c5282;
+	border-bottom: 1px solid #c4d4e4;
+	padding-bottom: 0.5rem;
+}
+
+.seo-box h4 {
+	margin: 0.75rem 0 0.35rem;
+	font-size: 0.95rem;
+	color: #2d3748;
+}
+
+.seo-box ul {
+	margin: 0.25rem 0 0;
+	padding-left: 1.25rem;
+}
+
+.seo-box .seo-tags-list {
+	margin-top: 0.35rem;
+	padding-left: 1.25rem;
+	color: #4a5568;
+	list-style: disc;
+}
+
+.seo-box .seo-tags-list li {
+	margin-bottom: 0.2rem;
+}
+
+.seo-box .seo-suggestion {
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	padding: 0.6rem 0.75rem;
+	margin-top: 0.35rem;
+	font-size: 0.85rem;
+	color: #2d3748;
+	line-height: 1.4;
+}
+
+.seo-box .seo-eval-list {
+	margin: 0.25rem 0 0;
+	padding-left: 1.25rem;
+	color: #4a5568;
+}
+
+.seo-box .seo-eval-list li {
+	margin-bottom: 0.2rem;
+}
+
+/* === Feedback (aprovação cliente) === */
+.feedback-section {
+	margin-top: 2rem;
+	padding: 1rem;
+	background: #f8f4f6;
+	border: 1px solid #e8d4dc;
+	border-radius: 8px;
+}
+
+.feedback-section h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1rem;
+	color: #6b3a4a;
+}
+
+.feedback-section textarea {
+	width: 100%;
+	min-height: 80px;
+	padding: 0.75rem;
+	border: 1px solid #d4a8b8;
+	border-radius: 6px;
+	font-family: inherit;
+	font-size: 0.9rem;
+	resize: vertical;
+}
+
+.feedback-section button {
+	margin-top: 0.5rem;
+	padding: 0.5rem 1.25rem;
+	background: #6b3a4a;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+
+.feedback-section button:hover {
+	background: #5a2f3e;
+}
+
+.feedback-section .feedback-msg {
+	margin-top: 0.5rem;
+	font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+	.layout-with-sidebar {
+		flex-direction: column;
+	}
+	.sidebar {
+		width: 100%;
+		border-right: none;
+		border-bottom: 1px solid #e8d4dc;
+	}
+	.main-content {
+		padding: 1rem;
+	}
+}
+
+/* === NuvemShop (manter compatibilidade) === */
+.section-topbar {
+	overflow: hidden;
+}
+
+.section-topbar .social-icon {
+	display: none;
+}
+
+.section-topbar .text-center {
+	animation: moveTextDesktop 20s linear infinite;
+	white-space: nowrap;
+	text-align: unset;
+	position: relative;
+	display: inline-block;
+}
+
+@keyframes moveTextDesktop {
+	from {
+		transform: translateX(100%);
+	}
+	
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@media (max-width:768px) {
+	.section-topbar .text-center {
+		animation: moveTextMobile 10s linear infinite;
+	}
+	
+	@keyframes moveTextMobile {
+		from {
+			transform: translateX(80%);
+		}
+		
+		to {
+			transform: translateX(-80%);
+		}
+	}
+}
+
+.powered-by-logo {
+	display: none;
+}
